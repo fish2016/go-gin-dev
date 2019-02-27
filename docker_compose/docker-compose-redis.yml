@@ -1,0 +1,33 @@
+version: '2'
+services:
+#  db:
+#    build: ./db
+#    volumes:
+#      - ./db/pgdata:/pgdata
+#    ports:
+#      - "5432"
+#    environment:
+#      - POSTGRES_USER=docker
+#      - POSTGRES_PASSWORD=docker
+#      - PGDATA=/pgdata
+
+  redis:
+    image: registry.cn-shenzhen.aliyuncs.com/dengjin_docker_2019/centos_redis:0.8
+
+    ports:
+      - "6379:6379"
+
+    #environment:
+      ##- MYSQL_ROOT_PASSWORD=docker
+      ##- MYSQL_DATABASE=rego_database
+      ##- MYSQL_RANDOM_ROOT_PASSWORD=false
+      ##- MYSQL_ONETIME_PASSWORD=false
+      ##- MYSQL_ALLOW_EMPTY_PASSWORD=false
+      ##- MYSQL_ROOT_PASSWORD=docker
+      ##- MYSQL_USER=docker
+      ##- MYSQL_PASSWORD=docker
+      #- MYSQL_DATABASE
+      #- MYSQL_ROOT_HOST
+      ##- MYSQL_LOG_CONSOLE=true
+
+

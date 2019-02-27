@@ -1,0 +1,54 @@
+version: '2'
+services:
+#  db:
+#    build: ./db
+#    volumes:
+#      - ./db/pgdata:/pgdata
+#    ports:
+#      - "5432"
+#    environment:
+#      - POSTGRES_USER=docker
+#      - POSTGRES_PASSWORD=docker
+#      - PGDATA=/pgdata
+
+  mysql:
+    build: ./db/mysql
+
+    ports:
+      - "3306:3306"
+      - "33060"
+    environment:
+      - MYSQL_ROOT_PASSWORD=docker
+      - MYSQL_DATABASE=rego_database
+      ##- MYSQL_RANDOM_ROOT_PASSWORD=false
+      ##- MYSQL_ONETIME_PASSWORD=false
+      ##- MYSQL_ALLOW_EMPTY_PASSWORD=false
+      ##- MYSQL_ROOT_PASSWORD=docker
+      ##- MYSQL_USER=docker
+      ##- MYSQL_PASSWORD=docker
+      #- MYSQL_DATABASE
+      #- MYSQL_ROOT_HOST
+      ##- MYSQL_LOG_CONSOLE=true
+
+  api:
+    build:
+      context: ./backend/src
+      args:
+        app_env: ${APP_ENV}
+    volumes:
+      #- ./backend/src/api:/go/src/github.com/user/GoDoRP/api
+      - ./backend/src/api:/go/src/github.com/user/GoDoRP/api
+    ports:
+      - "5000:8080"
+    links:
+      - mysql
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        app_env: ${APP_ENV}
+    volumes:
+      - ./frontend/src:/frontend/src 
+    ports:
+      - "3000:3000"
