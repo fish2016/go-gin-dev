@@ -27,6 +27,12 @@
 			"revisionTime": "2017-08-19T22:39:52Z"
 		},
 		{
+			"checksumSHA1": "p2E6e3igHrAO+DPZPb/5s+dyNW8=",
+			"path": "github.com/alecthomas/template",
+			"revision": "a0175ee3bccc567396460bf5acd36800cb10c49c",
+			"revisionTime": "2016-04-05T07:15:01Z"
+		},
+		{
 			"checksumSHA1": "ZCQg0mUz1Azs/nmG5izr0+Sb+9U=",
 			"path": "github.com/astaxie/beego/validation",
 			"revision": "f16688817aa428d10361394015b40d096b680542",
@@ -338,5 +344,5 @@
 			"revisionTime": "2018-01-09T11:43:31Z"
 		}
 	],
-	"rootPath": "github.com/EDDYCJY/go-gin-example"
+	"rootPath": "github.com/fish2016/go-gin-dev"
 }

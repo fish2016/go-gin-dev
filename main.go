@@ -5,11 +5,11 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/routers"
-	"github.com/EDDYCJY/go-gin-example/models"
-	"github.com/EDDYCJY/go-gin-example/pkg/logging"
-	"github.com/EDDYCJY/go-gin-example/pkg/gredis"
+	"github.com/fish2016/go-gin-dev/models"
+	"github.com/fish2016/go-gin-dev/pkg/gredis"
+	"github.com/fish2016/go-gin-dev/pkg/logging"
+	"github.com/fish2016/go-gin-dev/pkg/setting"
+	"github.com/fish2016/go-gin-dev/routers"
 )
 
 func init() {
@@ -22,9 +22,9 @@ func init() {
 // @title Golang Gin API
 // @version 1.0
 // @description An example of gin
-// @termsOfService https://github.com/EDDYCJY/go-gin-example
+// @termsOfService https://github.com/fish2016/go-gin-dev
 // @license.name MIT
-// @license.url https://github.com/EDDYCJY/go-gin-example/blob/master/LICENSE
+// @license.url https://github.com/fish2016/go-gin-dev/blob/master/LICENSE
 func main() {
 	routersInit := routers.InitRouter()
 	readTimeout := setting.ServerSetting.ReadTimeout

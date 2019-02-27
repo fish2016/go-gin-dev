@@ -7,7 +7,7 @@ ARG app_env
 ENV APP_ENV $app_env
 
 # it is okay to leave user/GoDoRP as long as you do not want to share code with other libraries
-#COPY . /go/src/github.com/EDDYCJY/go-gin-example
+#COPY . /go/src/github.com/fish2016/go-gin-dev
 #WORKDIR /go/src/github.com/user/GoDoRP/src
 #COPY ./api /go/src/github.com/user/GoDoRP/api
 #COPY ./github.com/denisenkom /go/src/github.com/denisenkom
@@ -18,24 +18,24 @@ ENV APP_ENV $app_env
 
 #COPY ./golang.org /go/src/golang.org
 
-#WORKDIR /go/src/github.com/EDDYCJY/go-gin-example
+#WORKDIR /go/src/github.com/fish2016/go-gin-dev
 
 # added vendor services will need to be included here
 #RUN go get ./vendor/database
 
-RUN go get github.com/EDDYCJY/go-gin-example
-RUN go install github.com/EDDYCJY/go-gin-example
+RUN go get github.com/fish2016/go-gin-dev
+RUN go install github.com/fish2016/go-gin-dev
 
 #RUN go get github.com/pilu/fresh
 
-COPY ../github.com/EDDYCJY/go-gin-example/conf /go/bin/
+COPY ../github.com/fish2016/go-gin-dev/conf /go/bin/
 WORKDIR /go/bin
 # if dev setting will use pilu/fresh for code reloading via docker-compose volume sharing with local machine
 # if production setting will build binary
 # CMD if [ ${APP_ENV} = production ]; \
 # 	then \
-# 	cp /go/src/github.com/EDDYCJY/go-gin-example/conf /go/bin/ \
-# 	#cp /go/src/github.com/EDDYCJY/go-gin-example/runtime /go/bin/ \
+# 	cp /go/src/github.com/fish2016/go-gin-dev/conf /go/bin/ \
+# 	#cp /go/src/github.com/fish2016/go-gin-dev/runtime /go/bin/ \
 # 	go-gin-example; \
 # 	else \
 # 	#go get github.com/pilu/fresh && \

@@ -7,13 +7,13 @@ import (
 	"github.com/astaxie/beego/validation"
 	"github.com/gin-gonic/gin"
 
-	"github.com/EDDYCJY/go-gin-example/pkg/app"
-	"github.com/EDDYCJY/go-gin-example/pkg/e"
-	"github.com/EDDYCJY/go-gin-example/pkg/export"
-	"github.com/EDDYCJY/go-gin-example/pkg/logging"
-	"github.com/EDDYCJY/go-gin-example/pkg/setting"
-	"github.com/EDDYCJY/go-gin-example/pkg/util"
-	"github.com/EDDYCJY/go-gin-example/service/tag_service"
+	"github.com/fish2016/go-gin-dev/pkg/app"
+	"github.com/fish2016/go-gin-dev/pkg/e"
+	"github.com/fish2016/go-gin-dev/pkg/export"
+	"github.com/fish2016/go-gin-dev/pkg/logging"
+	"github.com/fish2016/go-gin-dev/pkg/setting"
+	"github.com/fish2016/go-gin-dev/pkg/util"
+	"github.com/fish2016/go-gin-dev/service/tag_service"
 )
 
 // @Summary Get multiple article tags

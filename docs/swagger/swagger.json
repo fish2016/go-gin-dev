@@ -3,11 +3,11 @@
     "info": {
         "description": "An example of gin",
         "title": "Golang Gin API",
-        "termsOfService": "https://github.com/EDDYCJY/go-gin-example",
+        "termsOfService": "https://github.com/fish2016/go-gin-dev",
         "contact": {},
         "license": {
             "name": "MIT",
-            "url": "https://github.com/EDDYCJY/go-gin-example/blob/master/LICENSE"
+            "url": "https://github.com/fish2016/go-gin-dev/blob/master/LICENSE"
         },
         "version": "1.0"
     },
