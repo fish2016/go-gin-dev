@@ -30,6 +30,6 @@ WORKDIR /go/bin
 # 	go-gin-example \
 # 	fi
 # 	
-CMD go-gin-example;
+CMD go-gin-dev;
 
 EXPOSE 8000
