@@ -45,3 +45,9 @@ func JWT() gin.HandlerFunc {
 		c.Next()
 	}
 }
+
+func JWTTest() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.Next()
+	}
+}

@@ -219,6 +219,24 @@
 			"revisionTime": "2017-11-07T05:05:31Z"
 		},
 		{
+			"checksumSHA1": "JXeCGk++eoIAw5D+p3QK21tq0iA=",
+			"path": "github.com/medivhzhan/weapp",
+			"revision": "04418b0ab5515bac227ca18d70f35c2264e37c82",
+			"revisionTime": "2018-09-23T10:29:37Z"
+		},
+		{
+			"checksumSHA1": "AiYPAEbYdUHb2HEqkoBX0OuxAk0=",
+			"path": "github.com/medivhzhan/weapp/util",
+			"revision": "04418b0ab5515bac227ca18d70f35c2264e37c82",
+			"revisionTime": "2018-09-23T10:29:37Z"
+		},
+		{
+			"checksumSHA1": "vyjGn4D0PY0C0fz1xFAtbo7IdHY=",
+			"path": "github.com/medivhzhan/weapp/util/ecb",
+			"revision": "04418b0ab5515bac227ca18d70f35c2264e37c82",
+			"revisionTime": "2018-09-23T10:29:37Z"
+		},
+		{
 			"checksumSHA1": "ZTcgWKWHsrX0RXYVXn5Xeb8Q0go=",
 			"path": "github.com/modern-go/concurrent",
 			"revision": "bacd9c7ef1dd9b15be4a9909b8ac7a4e313eec94",

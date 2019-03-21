@@ -16,9 +16,11 @@ import (
 	"github.com/fish2016/go-gin-dev/pkg/upload"
 	"github.com/fish2016/go-gin-dev/routers/api"
 	"github.com/fish2016/go-gin-dev/routers/api/v1"
+	"github.com/fish2016/go-gin-dev/routers/string_api"
 )
 
 func InitRouter() *gin.Engine {
+	stringApi := string_api.StringApi{}
 	r := gin.New()
 
 	r.Use(gin.Logger())
@@ -35,7 +37,8 @@ func InitRouter() *gin.Engine {
 	r.POST("/upload", api.UploadImage)
 
 	apiv1 := r.Group("/api/v1")
-	apiv1.Use(jwt.JWT())
+	//apiv1.Use(jwt.JWT())
+	apiv1.Use(jwt.JWTTest())
 	{
 		//获取标签列表
 		apiv1.GET("/tags", v1.GetTags)
@@ -62,6 +65,9 @@ func InitRouter() *gin.Engine {
 		apiv1.DELETE("/articles/:id", v1.DeleteArticle)
 		//生成文章海报
 		apiv1.POST("/articles/poster/generate", v1.GenerateArticlePoster)
+
+		apiv1.POST("/upppercase", stringApi.Uppercase)
+
 	}
 
 	return r

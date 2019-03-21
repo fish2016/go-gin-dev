@@ -5,8 +5,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/fish2016/go-gin-dev/models"
-	"github.com/fish2016/go-gin-dev/pkg/gredis"
+	_ "github.com/fish2016/go-gin-dev/models"
+	_ "github.com/fish2016/go-gin-dev/pkg/gredis"
 	"github.com/fish2016/go-gin-dev/pkg/logging"
 	"github.com/fish2016/go-gin-dev/pkg/setting"
 	"github.com/fish2016/go-gin-dev/routers"
@@ -14,9 +14,9 @@ import (
 
 func init() {
 	setting.Setup()
-	models.Setup()
+	//models.Setup()
 	logging.Setup()
-	gredis.Setup()
+	//gredis.Setup()
 }
 
 // @title Golang Gin API
